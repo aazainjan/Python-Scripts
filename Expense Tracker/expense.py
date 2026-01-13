@@ -36,7 +36,7 @@ def remove_expense():
   surety = tb.askyesno('Are you sure?', f'Are you sure that you want to delete the record of {values_selected[2]}')
 
   if surety:
-     connector.execute('DELETE FROM ExpenseTracker WHERE ID=%d' % values_selected[0])
+    connector.execute('DELETE FROM ExpenseTracker WHERE ID=?', (values_selected[0],))
      connector.commit()
 
      list_all_expenses()
