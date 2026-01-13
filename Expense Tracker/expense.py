@@ -1,7 +1,7 @@
 """
 DebEx - Expense Tracker GUI
 Description: Track, filter, delete, and export expenses.
-Dependencies: tkinter, tkcalendar, sqlite3
+Dependencies: tkinter, tkcalendar, sqlite3.
 """
 import datetime
 import sqlite3
