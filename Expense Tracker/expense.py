@@ -294,6 +294,11 @@ table.column('#6', width=125, stretch=NO)  # Mode of Payment column
 table.place(relx=0, y=0, relheight=1, relwidth=1)
 
 list_all_expenses()
+
+# Show total expenses
+total_amount = sum([row[4] for row in connector.execute('SELECT * FROM ExpenseTracker')])
+Label(root, text=f"Total Expenses: {total_amount}", font=("Georgia", 14)).place(x=950, y=10)
+
 # Finalizing the GUI window
 root.update()
 root.mainloop()
